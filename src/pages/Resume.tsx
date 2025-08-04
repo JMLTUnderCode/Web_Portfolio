@@ -2,6 +2,8 @@ import React from 'react';
 import { IoBookOutline } from 'react-icons/io5';
 import { useLocation } from 'react-router-dom';
 
+//const BASE_URL = import.meta.env.BASE_URL;
+
 const Resume: React.FC = () => {
 	const location = useLocation();
 	const isActive = location.pathname === '/resume';

@@ -3,6 +3,9 @@ import { useLocation } from 'react-router-dom';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF, useAnimations } from '@react-three/drei';
 import '../styles/Avatar3D.css';
+
+const BASE_URL = import.meta.env.BASE_URL;
+
 function clamp(value: number, min: number, max: number): number {
     return Math.max(min, Math.min(max, value));
 }
@@ -12,7 +15,7 @@ interface AvatarModelProps {
 }
 
 function AvatarModel({ canvasRef }: AvatarModelProps) {
-    const gltf = useGLTF('/src/assets/images/avatar.glb');
+    const gltf = useGLTF(`${BASE_URL}assets/images/avatar.glb`);
     const { actions } = useAnimations(gltf.animations, gltf.scene);
     const modelRef = useRef<any>(null);
 

@@ -2,6 +2,8 @@ import React from 'react';
 import { IoChevronDown, IoMailOutline, IoPhonePortraitOutline, IoCalendarOutline, IoLocationOutline, IoLogoFacebook, IoLogoLinkedin, IoLogoInstagram } from 'react-icons/io5';
 import Avatar3D from './Avatar3D';
 
+//const BASE_URL = import.meta.env.BASE_URL;
+
 const Header: React.FC = () => (
 	<aside className="sidebar" data-sidebar>
 		<div className="sidebar-info">

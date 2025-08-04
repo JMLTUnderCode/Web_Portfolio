@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { IoChevronDown, IoEyeOutline } from 'react-icons/io5';
 import { useLocation } from 'react-router-dom';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 type Project = {
 	title: string;
 	category: string;
@@ -14,63 +16,63 @@ const projects: Project[] = [
 	{ 
 		title: 'Finance', 
 		category: 'web development', 
-		img: '/src/assets/images/project-1.jpg', 
+		img: `${BASE_URL}assets/images/project-1.jpg`, 
 		alt: 'finance', 
 		url: '#'
 	},
 	{ 
 		title: 'Orizon', 
 		category: 'web development', 
-		img: '/src/assets/images/project-2.png', 
+		img: `${BASE_URL}assets/images/project-2.png`, 
 		alt: 'orizon', 
 		url: '#' 
 	},
 	{ 
 		title: 'Fundo', 
 		category: 'web design', 
-		img: '/src/assets/images/project-3.jpg', 
+		img: `${BASE_URL}assets/images/project-3.jpg`, 
 		alt: 'fundo', 
 		url: '#'
 	},
 	{ 
 		title: 'Brawlhalla', 
 		category: 'applications', 
-		img: '/src/assets/images/project-4.png', 
+		img: `${BASE_URL}assets/images/project-4.png`, 
 		alt: 'brawlhalla', 
 		url: '#'
 	},
 	{ 
 		title: 'DSM.', 
 		category: 'web design', 
-		img: '/src/assets/images/project-5.png', 
+		img: `${BASE_URL}assets/images/project-5.png`, 
 		alt: 'dsm.', 
 		url: '#'
 	},
 	{ 
 		title: 'MetaSpark', 
 		category: 'web design', 
-		img: '/src/assets/images/project-6.png', 
+		img: `${BASE_URL}assets/images/project-6.png`,  
 		alt: 'metaspark', 
 		url: '#' 
 	},
 	{ 
 		title: 'Summary', 
 		category: 'web development', 
-		img: '/src/assets/images/project-7.png', 
+		img: `${BASE_URL}assets/images/project-7.png`, 
 		alt: 'summary', 
 		url: '#' 
 	},
 	{ 
 		title: 'Task Manager', 
 		category: 'applications', 
-		img: '/src/assets/images/project-8.jpg', 
+		img: `${BASE_URL}assets/images/project-8.jpg`, 
 		alt: 'task manager', 
 		url: '#' 
 	},
 	{ 
 		title: 'Arrival', 
 		category: 'web development', 
-		img: '/src/assets/images/project-9.png', 
+		img: `${BASE_URL}assets/images/project-9.png`, 
 		alt: 'arrival', 
 		url: '#' 
 	},

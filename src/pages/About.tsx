@@ -1,6 +1,8 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const About: React.FC = () => {
 	const location = useLocation();
 	const isActive = location.pathname === '/about';
@@ -41,7 +43,7 @@ const About: React.FC = () => {
 				<ul className="service-list">
 					<li className="service-item">
 						<div className="service-icon-box">
-							<img src="./src/assets/icons/icon-design.svg" alt="design icon" width="40" />
+							<img src={`${BASE_URL}assets/icons/icon-design.svg`} alt="design icon" width="40" />
 						</div>
 						<div className="service-content-box">
 							<h4 className="h4 service-item-title">Front development</h4>
@@ -52,7 +54,7 @@ const About: React.FC = () => {
 					</li>
 					<li className="service-item">
 						<div className="service-icon-box">
-							<img src="./src/assets/icons/icon-dev.svg" alt="Web development icon" width="40" />
+							<img src={`${BASE_URL}assets/icons/icon-dev.svg`} alt="Web development icon" width="40" />
 						</div>
 						<div className="service-content-box">
 							<h4 className="h4 service-item-title">Back development</h4>
@@ -63,7 +65,7 @@ const About: React.FC = () => {
 					</li>
 					<li className="service-item">
 						<div className="service-icon-box">
-							<img src="./src/assets/icons/icon-app.svg" alt="mobile app icon" width="40" />
+							<img src={`${BASE_URL}assets/icons/icon-app.svg`} alt="mobile app icon" width="40" />
 						</div>
 						<div className="service-content-box">
 							<h4 className="h4 service-item-title">Mobile development</h4>
@@ -74,7 +76,7 @@ const About: React.FC = () => {
 					</li>
 					<li className="service-item">
 						<div className="service-icon-box">
-							<img src="./src/assets/icons/icon-photo.svg" alt="camera icon" width="40" />
+							<img src={`${BASE_URL}assets/icons/icon-photo.svg`} alt="camera icon" width="40" />
 						</div>
 						<div className="service-content-box">
 							<h4 className="h4 service-item-title">Data Base</h4>
