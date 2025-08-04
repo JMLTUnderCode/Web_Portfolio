@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import About from './pages/About';
@@ -7,7 +7,7 @@ import Portfolio from './pages/Portfolio';
 
 function App() {
   	return (
-		<BrowserRouter>
+		<HashRouter>
 			<main>
 				<Header />
 				<div className="main-content">
@@ -20,7 +20,7 @@ function App() {
 					</Routes>
 				</div>
 			</main>
-		</BrowserRouter>
+		</HashRouter>
 	);
 }
 
