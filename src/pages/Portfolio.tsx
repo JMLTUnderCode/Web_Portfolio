@@ -95,7 +95,7 @@ const Portfolio: React.FC = () => {
 	return (
 		<article className={`portfolio${isActive ? ' active' : ''}`} data-page="portfolio">
 			<header>
-				<h2 className="h2 article-title">Portfolio</h2>
+				<h2 className="h2 article-title animate__animated animate__lightSpeedInRight">Portfolio</h2>
 			</header>
 
 			<section className="projects">
