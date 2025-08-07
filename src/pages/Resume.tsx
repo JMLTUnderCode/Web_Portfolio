@@ -40,10 +40,10 @@ const educationList: EducationAndExperienceItem[] = [
 
 const experienceList: EducationAndExperienceItem[] = [
 	{
-		name: "Desarrollador Backend",
+		name: "Empire Keeway - Moto Candela",
 		start: "2023",
 		end: "2023",
-		description: "Descripcion",
+		description: "Desarrollador Backend. Participé en el desarrollo de un sistema de gestión de inventario y ventas para la empresa, utilizando tecnologías como Django, Neon, Postgressql.",
 	},
 ];
 
@@ -58,27 +58,46 @@ const skillGroups: { category: string; skills: Skill[] }[] = [
 	{
 		category: 'Lenguajes de Programación',
 		skills: [
-			{ name: 'C/C++', logo: `${BASE_URL}assets/logo/logo-cpp.svg`, level: 'Intermedio', tagClass: 'nivel-intermedio' },
-			{ name: 'Python', logo: `${BASE_URL}assets/logo/logo-python.svg`, level: 'Intermedio', tagClass: 'nivel-intermedio' },
-			{ name: 'JavaScript', logo: `${BASE_URL}assets/logo/logo-javascript.svg`, level: 'Intermedio', tagClass: 'nivel-intermedio' },
-			{ name: 'TypeScript', logo: `${BASE_URL}assets/logo/logo-typescript.svg`, level: 'Intermedio', tagClass: 'nivel-intermedio' },
+			{ name: 'C++', logo: `${BASE_URL}assets/logo/logo-cpp.svg`, level: 'Alto', tagClass: 'nivel-alto' },
+			{ name: 'Python', logo: `${BASE_URL}assets/logo/logo-python.svg`, level: 'Alto', tagClass: 'nivel-alto' },
+			{ name: 'C', logo: `${BASE_URL}assets/logo/logo-c.svg`, level: 'Intermedio', tagClass: 'nivel-intermedio' },
+			{ name: 'Latex', logo: `${BASE_URL}assets/logo/logo-latex.svg`, level: 'Intermedio', tagClass: 'nivel-intermedio' },
 			{ name: 'HTML5', logo: `${BASE_URL}assets/logo/logo-html5.svg`, level: 'Intermedio', tagClass: 'nivel-intermedio' },
 			{ name: 'CSS3', logo: `${BASE_URL}assets/logo/logo-css3.svg`, level: 'Intermedio', tagClass: 'nivel-intermedio' },
+			{ name: 'php', logo: `${BASE_URL}assets/logo/logo-php.svg`, level: 'Bajo', tagClass: 'nivel-bajo' },
+			{ name: 'JavaScript', logo: `${BASE_URL}assets/logo/logo-javascript.svg`, level: 'Bajo', tagClass: 'nivel-bajo' },
+			{ name: 'TypeScript', logo: `${BASE_URL}assets/logo/logo-typescript.svg`, level: 'Bajo', tagClass: 'nivel-bajo' },
 		],
 	},
 	{
-		category: 'Frameworks y Librerías',
+		category: 'Frameworks, Librerías y Herramientas',
 		skills: [
-			{ name: 'React', logo: `${BASE_URL}assets/logo/logo-react.svg`, level: 'Intermedio', tagClass: 'nivel-intermedio' },
+			{ name: 'Visual Studio Code', logo: `${BASE_URL}assets/logo/logo-vscode.svg`, level: 'Alto', tagClass: 'nivel-alto' },
+			{ name: 'Linux (Ubuntu)', logo: `${BASE_URL}assets/logo/logo-linux.svg`, level: 'Alto', tagClass: 'nivel-alto' },
+			{ name: 'GitHub', logo: `${BASE_URL}assets/logo/logo-github.svg`, level: 'Alto', tagClass: 'nivel-alto' },
+			{ name: 'Git', logo: `${BASE_URL}assets/logo/logo-git.svg`, level: 'Alto', tagClass: 'nivel-alto' },
+			{ name: 'GitHub Copilot', logo: `${BASE_URL}assets/logo/logo-copilot.svg`, level: 'Intermedio', tagClass: 'nivel-intermedio' },
 			{ name: 'Django', logo: `${BASE_URL}assets/logo/logo-django.svg`, level: 'Intermedio', tagClass: 'nivel-intermedio' },
+			{ name: 'Postman', logo: `${BASE_URL}assets/logo/logo-postman.svg`, level: 'Intermedio', tagClass: 'nivel-intermedio' },
+			{ name: 'React', logo: `${BASE_URL}assets/logo/logo-react.svg`, level: 'Intermedio', tagClass: 'nivel-intermedio' },
+			{ name: 'GitLab', logo: `${BASE_URL}assets/logo/logo-gitlab.svg`, level: 'Bajo', tagClass: 'nivel-bajo' },
+			{ name: 'Node.js', logo: `${BASE_URL}assets/logo/logo-nodejs.svg`, level: 'Bajo', tagClass: 'nivel-bajo' },
+			{ name: 'Express.js', logo: `${BASE_URL}assets/logo/logo-expressjs.svg`, level: 'Bajo', tagClass: 'nivel-bajo' },
+			{ name: 'Matplotlib', logo: `${BASE_URL}assets/logo/logo-matplotlib.svg`, level: 'Bajo', tagClass: 'nivel-bajo' },
+			{ name: 'NumPy', logo: `${BASE_URL}assets/logo/logo-numpy.svg`, level: 'Bajo', tagClass: 'nivel-bajo' },
+			{ name: 'Pandas', logo: `${BASE_URL}assets/logo/logo-pandas.svg`, level: 'Bajo', tagClass: 'nivel-bajo' },
 		],
 	},
 	{
-		category: 'Bases de Datos',
+		category: 'Servicios Web y Bases de Datos',
 		skills: [
-			{ name: 'MongoDB', logo: `${BASE_URL}assets/logo/logo-mongodb.svg`, level: 'Intermedio', tagClass: 'nivel-intermedio' },
-			{ name: 'PostgreSQL', logo: `${BASE_URL}assets/logo/logo-postgresql.svg`, level: 'Intermedio', tagClass: 'nivel-intermedio' },
-			{ name: 'MySQL', logo: `${BASE_URL}assets/logo/logo-mysql.svg`, level: 'Intermedio', tagClass: 'nivel-intermedio' },
+			{ name: 'GitHub Pages', logo: `${BASE_URL}assets/logo/logo-githubpages.svg`, level: 'Alto', tagClass: 'nivel-alto' },
+			{ name: 'Neon', logo: `${BASE_URL}assets/logo/logo-neon.png`, level: 'Bajo', tagClass: 'nivel-bajo' },
+			{ name: 'MongoDB Atlas', logo: `${BASE_URL}assets/logo/logo-mongodbatlas.svg`, level: 'Bajo', tagClass: 'nivel-bajo' },
+			{ name: 'Render', logo: `${BASE_URL}assets/logo/logo-render.svg`, level: 'Bajo', tagClass: 'nivel-bajo' },
+			{ name: 'Vercel', logo: `${BASE_URL}assets/logo/logo-vercel.svg`, level: 'Bajo', tagClass: 'nivel-bajo' },
+			{ name: 'PostgreSQL', logo: `${BASE_URL}assets/logo/logo-postgresql.svg`, level: 'Bajo', tagClass: 'nivel-bajo' },
+			{ name: 'MySQL', logo: `${BASE_URL}assets/logo/logo-mysql.svg`, level: 'Bajo', tagClass: 'nivel-bajo' },
 		],
 	},
 ];
