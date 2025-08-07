@@ -863,6 +863,15 @@ main {
   padding: 0;
 }
 
+/* Responsive: skills-list grid */
+@media (max-width: 768px) {
+  
+  .skills-list {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
 .skills-card {
   display: flex;
   align-items: center;
@@ -908,6 +917,7 @@ main {
 .skills-card-level-label {
   font-weight: 500;
   font-size: 0.95em;
+  color: var(--white-2) !important;
 }
 
 .skills-card-level-tag {
@@ -925,22 +935,22 @@ main {
 /* Colores para cada nivel */
 .nivel-bajo {
   background: #ff9800;
-  color: #fff;
+  color: #fff !important; 
   border-color: #ff9800;
 }
 .nivel-intermedio {
   background: #2196f3;
-  color: #fff;
+  color: #fff !important;
   border-color: #2196f3;
 }
 .nivel-alto {
   background: #4caf50;
-  color: #fff;
+  color: #fff !important;
   border-color: #4caf50;
 }
 .nivel-profesional {
   background: linear-gradient(90deg, #FFD700 60%, #fff700 100%);
-  color: #222;
+  color: #222 !important;
   border-color: #FFD700;
 }
 /* === FIN CAMBIO === */
