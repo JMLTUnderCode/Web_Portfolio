@@ -323,7 +323,9 @@ main {
   transition: var(--transition-2);
 }
 
-.sidebar.active { max-height: 405px; }
+/* === INICIO CAMBIO: Ajuste de max-height en .sidebar para escritorio - 2025-08-06 (JMLTUnderCode) === */
+.sidebar.active { max-height: 505px; }
+/* === FIN CAMBIO === */
 
 .sidebar-info {
   position: relative;
@@ -544,7 +546,13 @@ main {
 
 .service-icon-box { margin-bottom: 10px; }
 
-.service-icon-box img { margin: auto; }
+/* === INICIO CAMBIO: Ajuste de centrado y tamaño de imagen en .service-icon-box - 2025-08-06 (JMLTUnderCode) === */
+/* Se asegura que la imagen dentro de .service-icon-box esté centrada y tenga tamaño fijo de 40x40px para mantener la consistencia visual en los iconos de servicios. */
+.service-icon-box img { 
+  margin: auto;
+  width: 40px;
+}
+/* === FIN CAMBIO === */
 
 .service-content-box { text-align: center; }
 
@@ -1252,6 +1260,10 @@ textarea.form-input::-webkit-resizer { display: none; }
   .project-img,
   .blog-banner-box { height: auto; }
 
+  /* === INICIO CAMBIO: Centrado de iconos sociales en social-list - 2025-08-06 (JMLTUnderCode) === */
+  /* Se ajusta la propiedad justify-content para que los iconos sociales estén centrados en la barra social. */
+  .social-list { justify-content: center; }
+  /* === FIN CAMBIO === */
 }
 
 
@@ -1769,7 +1781,12 @@ textarea.form-input::-webkit-resizer { display: none; }
  */
 
 @media (min-width: 1250px) {
-
+  /* === INICIO CAMBIO: Ajuste de max-height en .sidebar para escritorio - 2025-08-06 (JMLTUnderCode) === */
+  /* Se agrega max-height: none !important; en el breakpoint min-width: 1250px para evitar que el sidebar se encoja al volver de mobile a desktop y asegurar que todo el contenido (incluyendo Location) sea visible. */
+  .sidebar {
+    max-height: none !important;
+  }
+  /* === FIN CAMBIO === */
   /**
    * RESET
    */
