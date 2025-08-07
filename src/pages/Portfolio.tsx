@@ -93,7 +93,7 @@ const Portfolio: React.FC = () => {
 			: projects.filter((p) => p.category === selectedCategory);
 
 	return (
-		<article className={`portfolio${isActive ? ' active' : ''}`} data-page="portfolio">
+		<article className={`pages portfolio${isActive ? ' active' : ''}`} data-page="portfolio">
 			<header>
 				<h2 className="h2 article-title animate__animated animate__lightSpeedInRight">Portfolio</h2>
 			</header>

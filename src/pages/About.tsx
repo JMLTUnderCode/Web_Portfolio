@@ -7,7 +7,7 @@ const About: React.FC = () => {
 	const location = useLocation();
 	const isActive = location.pathname === '/about';
 	return (
-		<article className={`about${isActive ? ' active' : ''}`} data-page="about">
+		<article className={`pages about${isActive ? ' active' : ''}`} data-page="about">
 			<header>
 				<h2 className="h2 article-title animate__animated animate__lightSpeedInRight">About me</h2>
 			</header>

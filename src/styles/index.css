@@ -182,6 +182,10 @@ article {
   margin: 16px 0;
 }
 
+/* === INICIO CAMBIO: Transición añadida a .pages - 2025-08-06 (JMLTUnderCode) === */
+.pages { transition: var(--transition-2); }
+/* === FIN CAMBIO === */
+
 .icon-box {
   position: relative;
   background: var(--border-gradient-onyx);
@@ -508,8 +512,12 @@ main {
   line-height: 1.6;
 }
 
-.about-text p { margin-bottom: 15px; }
-
+/* === INICIO CAMBIO: Ajuste de aliniacion de párrafos de .about-text - 2025-08-06 (JMLTUnderCode) === */
+.about-text p { 
+  margin-bottom: 15px; 
+  text-align: justify;
+}
+/* === FIN CAMBIO === */
 
 
 /**
@@ -563,6 +571,9 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-3);
   line-height: 1.6;
+  /* === INICIO CAMBIO: Ajuste de alineación de texto en .service-item-text - 2025-08-06 (JMLTUnderCode) === */
+  text-align: justify;
+  /* === FIN CAMBIO === */
 }
 
 
@@ -1735,6 +1746,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     position: relative;
     width: max-content;
     margin: auto;
+    transition: var(--transition-2);
   }
 
 
@@ -1862,8 +1874,10 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .main-content {
-    min-width: 75%;
-    width: 75%;
+    /* === INICIO CAMBIO: Ajuste de ancho en .main-content - 2025-08-06 (JMLTUnderCode) === */
+    min-width: 69%;
+    width: 69%;
+    /* === FIN CAMBIO === */
     margin: 0;
   }
 

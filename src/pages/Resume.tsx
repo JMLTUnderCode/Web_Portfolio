@@ -8,7 +8,7 @@ const Resume: React.FC = () => {
 	const location = useLocation();
 	const isActive = location.pathname === '/resume';
 	return (
-		<article className={`resume${isActive ? ' active' : ''}`} data-page="resume">
+		<article className={`pages resume${isActive ? ' active' : ''}`} data-page="resume">
 			<header>
 				<h2 className="h2 article-title animate__animated animate__lightSpeedInRight">Resume</h2>
 			</header>
