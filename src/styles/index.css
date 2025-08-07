@@ -1238,6 +1238,35 @@ textarea.form-input::-webkit-resizer { display: none; }
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
+/* === INICIO CAMBIO: Ajuste de estilos responsivos para mobile en .info-content y .social-list - 2025-08-06 (JMLTUnderCode) === */
+/* Se centra el contenido de .info-content y los iconos sociales en .social-list para mejorar la visualización en pantallas menores a 450px. 
+   - .info-content: ancho 100% y centrado.
+   - .info-content .name y .title: texto centrado.
+   - .social-list: iconos sociales centrados horizontalmente.
+*/
+@media (max-width: 450px) {
+
+  .info-content {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .info-content .name {
+    text-align: center;
+  }
+
+  .info-content p {
+    justify-content: center;
+  }
+
+  .info-content .title {
+    text-align: center;
+    width: 100%;
+  }
+
+  .social-list { justify-content: center; }
+}
+/* === FIN CAMBIO === */
 
 /**
  * responsive larger than 450px screen
