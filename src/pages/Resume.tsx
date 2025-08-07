@@ -2,7 +2,7 @@ import React from 'react';
 import { IoBookOutline } from 'react-icons/io5';
 import { useLocation } from 'react-router-dom';
 
-//const BASE_URL = import.meta.env.BASE_URL;
+const BASE_URL = import.meta.env.BASE_URL;
 
 const Resume: React.FC = () => {
 	const location = useLocation();
@@ -69,93 +69,146 @@ const Resume: React.FC = () => {
 			<section className="skill">
 				<h3 className="h3 skills-title">My skills</h3>
 				<ul className="skills-list content-card">
-					<li className="skills-item">
-						<div className="title-wrapper">
-							<h5 className="h5">C/C++</h5>
-							<data value="80">80%</data>
+					<li className="skills-card">
+						<div className="skills-card-logo">
+							<img src={`${BASE_URL}assets/logo/logo-cpp.svg`} alt="C/C++ logo" width={64} height={64} />
 						</div>
-						<div className="skill-progress-bg">
-							<div className="skill-progress-fill" style={{ width: '80%' }}></div>
-						</div>
-					</li>
-
-					<li className="skills-item">
-						<div className="title-wrapper">
-							<h5 className="h5">Python</h5>
-							<data value="70">70%</data>
-						</div>
-						<div className="skill-progress-bg">
-							<div className="skill-progress-fill" style={{ width: '70%' }}></div>
+						<div className="skills-card-info">
+							<h5 className="skills-card-title">C/C++</h5>
+							<div className="skills-card-level">
+								<span className="skills-card-level-label">Nivel:</span>
+								<span className="skills-card-level-tag nivel-intermedio">Intermedio</span>
+							</div>
 						</div>
 					</li>
 
-					<li className="skills-item">
-						<div className="title-wrapper">
-							<h5 className="h5">Django</h5>
-							<data value="90">90%</data>
+					<li className="skills-card">
+						<div className="skills-card-logo">
+							<img src={`${BASE_URL}assets/logo/logo-python.svg`} alt="Python logo" width={64} height={64} />
 						</div>
-						<div className="skill-progress-bg">
-							<div className="skill-progress-fill" style={{ width: '90%' }}></div>
-						</div>
-					</li>
-
-					<li className="skills-item">
-						<div className="title-wrapper">
-							<h5 className="h5">Mongo DB</h5>
-							<data value="50">50%</data>
-						</div>
-						<div className="skill-progress-bg">
-							<div className="skill-progress-fill" style={{ width: '50%' }}></div>
+						<div className="skills-card-info">
+							<h5 className="skills-card-title">Python</h5>
+							<div className="skills-card-level">
+								<span className="skills-card-level-label">Nivel:</span>
+								<span className="skills-card-level-tag nivel-intermedio">Intermedio</span>
+							</div>
 						</div>
 					</li>
 
-					<li className="skills-item">
-						<div className="title-wrapper">
-							<h5 className="h5">HTML</h5>
-							<data value="50">50%</data>
+					<li className="skills-card">
+						<div className="skills-card-logo">
+							<img src={`${BASE_URL}assets/logo/logo-html5.svg`} alt="HTML5 logo" width={64} height={64} />
 						</div>
-						<div className="skill-progress-bg">
-							<div className="skill-progress-fill" style={{ width: '50%' }}></div>
+						<div className="skills-card-info">
+							<h5 className="skills-card-title">HTML5</h5>
+							<div className="skills-card-level">
+								<span className="skills-card-level-label">Nivel:</span>
+								<span className="skills-card-level-tag nivel-intermedio">Intermedio</span>
+							</div>
+						</div>
+					</li>
+					
+					<li className="skills-card">
+						<div className="skills-card-logo">
+							<img src={`${BASE_URL}assets/logo/logo-css3.svg`} alt="CSS3 logo" width={64} height={64} />
+						</div>
+						<div className="skills-card-info">
+							<h5 className="skills-card-title">CSS3</h5>
+							<div className="skills-card-level">
+								<span className="skills-card-level-label">Nivel:</span>
+								<span className="skills-card-level-tag nivel-intermedio">Intermedio</span>
+							</div>
 						</div>
 					</li>
 
-					<li className="skills-item">
-						<div className="title-wrapper">
-							<h5 className="h5">CSS</h5>
-							<data value="50">50%</data>
+					<li className="skills-card">
+						<div className="skills-card-logo">
+							<img src={`${BASE_URL}assets/logo/logo-javascript.svg`} alt="JavaScript logo" width={64} height={64} />
 						</div>
-						<div className="skill-progress-bg">
-							<div className="skill-progress-fill" style={{ width: '50%' }}></div>
-						</div>
-					</li>
-
-					<li className="skills-item">
-						<div className="title-wrapper">
-							<h5 className="h5">JavaScript</h5>
-							<data value="50">50%</data>
-						</div>
-						<div className="skill-progress-bg">
-							<div className="skill-progress-fill" style={{ width: '50%' }}></div>
+						<div className="skills-card-info">
+							<h5 className="skills-card-title">JavaScript</h5>
+							<div className="skills-card-level">
+								<span className="skills-card-level-label">Nivel:</span>
+								<span className="skills-card-level-tag nivel-intermedio">Intermedio</span>
+							</div>
 						</div>
 					</li>
 
-					<li className="skills-item">
-						<div className="title-wrapper">
-							<h5 className="h5">TypeScript</h5>
-							<data value="50">50%</data>
+					<li className="skills-card">
+						<div className="skills-card-logo">
+							<img src={`${BASE_URL}assets/logo/logo-typescript.svg`} alt="TypeScript logo" width={64} height={64} />
 						</div>
-						<div className="skill-progress-bg">
-							<div className="skill-progress-fill" style={{ width: '50%' }}></div>
+						<div className="skills-card-info">
+							<h5 className="skills-card-title">TypeScript</h5>
+							<div className="skills-card-level">
+								<span className="skills-card-level-label">Nivel:</span>
+								<span className="skills-card-level-tag nivel-intermedio">Intermedio</span>
+							</div>
 						</div>
 					</li>
 
-					<li className="skills-item">
-						<div className="title-wrapper">
-							<h5 className="h5">React</h5>
-							<data value="50">50%</data>
+					<li className="skills-card">
+						<div className="skills-card-logo">
+							<img src={`${BASE_URL}assets/logo/logo-react.svg`} alt="React logo" width={64} height={64} />
 						</div>
-						<div className="skill-progress-bg">
-							<div className="skill-progress-fill" style={{ width: '50%' }}></div>
+						<div className="skills-card-info">
+							<h5 className="skills-card-title">React</h5>
+							<div className="skills-card-level">
+								<span className="skills-card-level-label">Nivel:</span>
+								<span className="skills-card-level-tag nivel-intermedio">Intermedio</span>
+							</div>
+						</div>
+					</li>
+
+					<li className="skills-card">
+						<div className="skills-card-logo">
+							<img src={`${BASE_URL}assets/logo/logo-django.svg`} alt="Django logo" width={64} height={64} />
+						</div>
+						<div className="skills-card-info">
+							<h5 className="skills-card-title">Django</h5>
+							<div className="skills-card-level">
+								<span className="skills-card-level-label">Nivel:</span>
+								<span className="skills-card-level-tag nivel-intermedio">Intermedio</span>
+							</div>
+						</div>
+					</li>
+
+					<li className="skills-card">
+						<div className="skills-card-logo">
+							<img src={`${BASE_URL}assets/logo/logo-mongodb.svg`} alt="MongoDB logo" width={64} height={64} />
+						</div>
+						<div className="skills-card-info">
+							<h5 className="skills-card-title">MongoDB</h5>
+							<div className="skills-card-level">
+								<span className="skills-card-level-label">Nivel:</span>
+								<span className="skills-card-level-tag nivel-intermedio">Intermedio</span>
+							</div>
+						</div>
+					</li>
+
+					<li className="skills-card">
+						<div className="skills-card-logo">
+							<img src={`${BASE_URL}assets/logo/logo-postgresql.svg`} alt="PostgreSQL logo" width={64} height={64} />
+						</div>
+						<div className="skills-card-info">
+							<h5 className="skills-card-title">PostgreSQL</h5>
+							<div className="skills-card-level">
+								<span className="skills-card-level-label">Nivel:</span>
+								<span className="skills-card-level-tag nivel-intermedio">Intermedio</span>
+							</div>
+						</div>
+					</li>
+
+					<li className="skills-card">
+						<div className="skills-card-logo">
+							<img src={`${BASE_URL}assets/logo/logo-mysql.svg`} alt="MySQL logo" width={64} height={64} />
+						</div>
+						<div className="skills-card-info">
+							<h5 className="skills-card-title">MySQL</h5>
+							<div className="skills-card-level">
+								<span className="skills-card-level-label">Nivel:</span>
+								<span className="skills-card-level-tag nivel-intermedio">Intermedio</span>
+							</div>
 						</div>
 					</li>
 				</ul>
