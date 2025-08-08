@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { IoChevronDown, IoMailOutline, IoPhonePortraitOutline, IoCalendarOutline, IoLocationOutline, IoLogoFacebook, IoLogoLinkedin, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5';
-import CodeforcesIcon from '../../public/assets/icons/CordeforcesIcon';
+import CodeforcesIcon from './CordeforcesIcon';
 import Avatar3D from './Avatar3D';
 
 //const BASE_URL = import.meta.env.BASE_URL;
