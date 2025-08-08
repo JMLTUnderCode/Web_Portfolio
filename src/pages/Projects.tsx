@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { IoChevronDown, IoEyeOutline } from 'react-icons/io5';
 import { useLocation } from 'react-router-dom';
+import SlideInRightOnScroll from '../components/SlideInRightOnScroll';
 
 const BASE_URL = import.meta.env.BASE_URL;
 
@@ -82,7 +83,7 @@ const categories = ['all', 'web design', 'applications', 'web development'];
 
 const Portfolio: React.FC = () => {
 	const location = useLocation();
-	const isActive = location.pathname === '/portfolio';
+	const isActive = location.pathname === '/projects';
 
 	const [selectedCategory, setSelectedCategory] = useState('all');
 	const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -93,9 +94,11 @@ const Portfolio: React.FC = () => {
 			: projects.filter((p) => p.category === selectedCategory);
 
 	return (
-		<article className={`pages portfolio${isActive ? ' active' : ''}`} data-page="portfolio">
+		<article className={`pages projects${isActive ? ' active' : ''}`} data-page="projects">
 			<header>
-				<h2 className="h2 article-title animate__animated animate__lightSpeedInRight">Portfolio</h2>
+				<SlideInRightOnScroll>
+					<h2 className="h2 article-title">Projects</h2>
+				</SlideInRightOnScroll>
 			</header>
 
 			<section className="projects">
