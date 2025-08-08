@@ -1,23 +1,45 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const pages = ['about', 'resume', 'portfolio'];
+type Pages = {
+	url: string;
+	name: string;
+};
+
+const pages: Pages[] = [
+	{ 
+		url: 'about',
+		name: 'About'
+	},
+	{ 
+		url: 'resume',
+		name: 'Resume'
+	},
+	{
+		url: 'github_metrics',
+		name: 'Github Metrics'
+	},
+	{ 
+		url: 'portfolio',
+		name: 'Portfolio'
+	},
+];
 
 const Navbar: React.FC = () => (
 	<nav className="navbar">
 		<ul className="navbar-list">
-			{pages.map(page => (
-				<li key={page} className="navbar-item">
+			{pages.map((page) => (
+				<li key={page.url} className="navbar-item">
 					<NavLink
-						to={`/${page}`}
+						to={`/${page.url}`}
 						className={({ isActive }) =>
 							`navbar-link${isActive ? ' active' : ''}`
 						}
 					>
-						{page.charAt(0).toUpperCase() + page.slice(1)}
+						{page.name.charAt(0).toUpperCase() + page.name.slice(1)}
 					</NavLink>
 				</li>
-			))}
+			))};
 		</ul>
 	</nav>
 );

@@ -955,8 +955,109 @@ main {
 }
 /* === FIN CAMBIO === */
 
+/*-----------------------------------*\
+  #GITHUB METRICS
+\*-----------------------------------*/
 
+.github_metrics .metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  width: 100%;           /* Ocupa todo el ancho del div padre (article.github_metrics) */
+  max-width: 100%;       /* No se desborda del padre */
+  background: var(--border-gradient-onyx);
+  border-radius: 14px;
+  box-shadow: var(--shadow-5);
+  padding: 10px;
+}
 
+.most_used_languages { 
+  grid-area: 1 / 1 / 3 / 2;
+  height: 600px;
+  background: var(--border-gradient-onyx);
+  border-radius: 14px;
+  box-shadow: var(--shadow-5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.most_used_languages img {
+  width: 95%;
+  height: 95%;
+}
+
+.contributions { 
+  grid-area: 1 / 2 / 3 / 3;
+  height: 600px;
+  background: var(--border-gradient-onyx);
+  border-radius: 14px;
+  box-shadow: var(--shadow-5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contributions img {
+  width: 95%;
+  height: 95%;
+}
+
+.trophies { 
+  grid-area: 3 / 1 / 4 / 3;
+  height: 300px;
+  background: var(--border-gradient-onyx);
+  border-radius: 14px;
+  box-shadow: var(--shadow-5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.trophies img {
+  width: 95%;
+}
+
+.stats { 
+  grid-area: 4 / 1 / 5 / 3;
+  height: 300px;
+  background: var(--border-gradient-onyx);
+  border-radius: 14px;
+  box-shadow: var(--shadow-5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stats img {
+  width: 95%;
+}
+
+.streak { 
+  grid-area: 5 / 1 / 6 / 3;
+  height: 300px;
+  background: var(--border-gradient-onyx);
+  border-radius: 14px;
+  box-shadow: var(--shadow-5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.streak img {
+  width: 95%;
+}
+
+.contributions_graph { 
+  grid-area: 6 / 1 / 7 / 3;
+  height: 300px;
+  background: var(--border-gradient-onyx);
+  border-radius: 14px;
+  box-shadow: var(--shadow-5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contributions_graph img {
+  width: 95%;
+}
 
 
 /*-----------------------------------*\
