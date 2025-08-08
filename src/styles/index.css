@@ -296,9 +296,20 @@ article.active {
   z-index: -1;
 }
 
+/* === INICIO CAMBIO: Se agrega manejo de opacidad para conseguir animacion fluida - 2025-08-08 (JMLTUnderCode) === */
+.animated-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: none;
+}
 
-
-
+.animate__animated.animate__fadeInUp {
+  opacity: 1 !important;
+}
+.animate__animated.animate__slideInRight {
+  opacity: 1 !important;
+}
+/* === FIN CAMBIO === */
 
 /*-----------------------------------*\
   #MAIN
