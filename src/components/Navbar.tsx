@@ -20,8 +20,8 @@ const pages: Pages[] = [
 		name: 'Github Metrics'
 	},
 	{ 
-		url: 'portfolio',
-		name: 'Portfolio'
+		url: 'projects',
+		name: 'Projects'
 	},
 ];
 
