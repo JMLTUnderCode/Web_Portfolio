@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import About from './pages/About';
 import Resume from './pages/Resume';
 import GitHub_Metrics from './pages/GitHub_Metrics';
-import Portfolio from './pages/Portfolio';
+import Projects from './pages/Projects';
 
 function App() {
   	return (
@@ -18,7 +18,7 @@ function App() {
 						<Route path="/about" element={<About />} />
 						<Route path="/resume" element={<Resume />} />
 						<Route path="/github_metrics" element={<GitHub_Metrics />} />
-						<Route path="/portfolio" element={<Portfolio />} />
+						<Route path="/projects" element={<Projects />} />
 					</Routes>
 				</div>
 			</main>
