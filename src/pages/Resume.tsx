@@ -1,6 +1,8 @@
 import React from 'react';
 import { IoBookOutline, IoBriefcaseOutline, IoSparklesOutline } from 'react-icons/io5';
 import { useLocation } from 'react-router-dom';
+import FadeInUpOnScroll from '../components/FadeInUpOnScroll';
+import SlideInRightOnScroll from '../components/SlideInRightOnScroll';
 
 const BASE_URL = import.meta.env.BASE_URL;
 
@@ -108,22 +110,28 @@ const Resume: React.FC = () => {
 	return (
 		<article className={`pages resume${isActive ? ' active' : ''}`} data-page="resume">
 			<header>
-				<h2 className="h2 article-title animate__animated animate__lightSpeedInRight">Resume</h2>
+				<SlideInRightOnScroll>
+					<h2 className="h2 article-title">Resume</h2>
+				</SlideInRightOnScroll>
 			</header>
 			<section className="timeline">
 				<div className="title-wrapper">
 					<div className="icon-box">
 						<IoBookOutline />
 					</div>
-					<h3 className="h3">Education</h3>
+					<SlideInRightOnScroll>
+						<h3 className="h3">Education</h3>
+					</SlideInRightOnScroll>
 				</div>
 				<ol className="timeline-list">
 					{educationList.map((item) => (
-						<li className="timeline-item" key={item.name}>
-							<h4 className="h4 timeline-item-title">{item.name}</h4>
-							<span>{item.start} — {item.end}</span>
-							<p className="timeline-text">{item.description}</p>
-						</li>
+						<FadeInUpOnScroll>
+							<li className="timeline-item" key={item.name}>
+								<h4 className="h4 timeline-item-title">{item.name}</h4>
+								<span>{item.start} — {item.end}</span>
+								<p className="timeline-text">{item.description}</p>
+							</li>
+						</FadeInUpOnScroll>
 					))}
 				</ol>
 			</section>
@@ -133,16 +141,20 @@ const Resume: React.FC = () => {
 					<div className="icon-box">
 						<IoBriefcaseOutline />
 					</div>
-					<h3 className="h3">Experience</h3>
+					<SlideInRightOnScroll>
+						<h3 className="h3">Experience</h3>
+					</SlideInRightOnScroll>
 				</div>
 
 				<ol className="timeline-list">
 					{experienceList.map((item) => (
-						<li className="timeline-item" key={item.name}>
-							<h4 className="h4 timeline-item-title">{item.name}</h4>
-							<span>{item.start} — {item.end}</span>
-							<p className="timeline-text">{item.description}</p>
-						</li>
+						<FadeInUpOnScroll>
+							<li className="timeline-item" key={item.name}>
+								<h4 className="h4 timeline-item-title">{item.name}</h4>
+								<span>{item.start} — {item.end}</span>
+								<p className="timeline-text">{item.description}</p>
+							</li>
+						</FadeInUpOnScroll>
 					))}
 				</ol>
 			</section>
@@ -152,7 +164,9 @@ const Resume: React.FC = () => {
 					<div className="icon-box">
 						<IoSparklesOutline />
 					</div>
-					<h3 className="h3">My Skills</h3>
+					<SlideInRightOnScroll>
+						<h3 className="h3">My Skills</h3>
+					</SlideInRightOnScroll>
 				</div>
 
 				<ol className="timeline-list">
@@ -163,18 +177,20 @@ const Resume: React.FC = () => {
 									<h4 className="h4 timeline-item-title">{group.category}</h4>
 									<ul className="skills-list content-card">
 							  			{group.skills.map((skill) => (
-											<li className="skills-card" key={skill.name}>
-								  				<div className="skills-card-logo">
-													<img src={skill.logo} alt={`${skill.name} logo`} width={64} height={64} />
-								  				</div>
-								  				<div className="skills-card-info">
-					   								 <h5 className="skills-card-title">{skill.name}</h5>
-								   		 			<div className="skills-card-level">
-									  					<span className="skills-card-level-label">Nivel:</span>
-									  					<span className={`skills-card-level-tag ${skill.tagClass}`}>{skill.level}</span>
-													</div>
-								  				</div>
-											</li>
+											<FadeInUpOnScroll>
+												<li className="skills-card" key={skill.name}>
+									  				<div className="skills-card-logo">
+														<img src={skill.logo} alt={`${skill.name} logo`} width={64} height={64} />
+									  				</div>
+									  				<div className="skills-card-info">
+						   								 <h5 className="skills-card-title">{skill.name}</h5>
+									   		 			<div className="skills-card-level">
+										  					<span className="skills-card-level-label">Nivel:</span>
+										  					<span className={`skills-card-level-tag ${skill.tagClass}`}>{skill.level}</span>
+														</div>
+									  				</div>
+												</li>
+											</FadeInUpOnScroll>
 							  			))}
 									</ul>
 								</li>
