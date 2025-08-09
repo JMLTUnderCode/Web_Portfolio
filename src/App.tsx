@@ -7,7 +7,6 @@ import GitHub_Metrics from './pages/GitHub_Metrics';
 import Projects from './pages/Projects';
 import ScrollToTop from './components/ScrollToTop';
 
-
 function App() {
   	return (
 		<HashRouter>
