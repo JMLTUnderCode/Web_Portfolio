@@ -39,7 +39,7 @@ const Navbar: React.FC = () => (
 						{page.name.charAt(0).toUpperCase() + page.name.slice(1)}
 					</NavLink>
 				</li>
-			))};
+			))}
 		</ul>
 	</nav>
 );
