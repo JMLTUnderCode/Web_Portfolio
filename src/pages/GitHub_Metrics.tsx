@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import SlideInRightOnScroll from '../components/SlideInRightOnScroll';
 
 //const BASE_URL = import.meta.env.BASE_URL;
 
@@ -9,7 +10,9 @@ const GitHub_Metrics: React.FC = () => {
 	return (
 		<article className={`pages github_metrics${isActive ? ' active' : ''}`} data-page="github_metrics">
 			<header>
-				<h2 className="h2 article-title animate__animated animate__lightSpeedInRight">Github Metrics</h2>
+				<SlideInRightOnScroll>
+					<h2 className="h2 article-title">Github Metrics</h2>
+				</SlideInRightOnScroll>
 			</header>
 
 			<div className="metrics">
