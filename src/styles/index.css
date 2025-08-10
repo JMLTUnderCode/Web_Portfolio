@@ -1042,6 +1042,19 @@ main {
   object-fit: contain;
   margin-top: 30px;
   padding: 10px;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.metric-modal-img.show {
+  opacity: 1;
+}
+
+.metric-modal-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 120px;
 }
 
 /*-----------------------------------*\

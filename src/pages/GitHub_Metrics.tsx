@@ -6,6 +6,10 @@ import FadeInUpOnScroll from '../components/animation/FadeInUpOnScroll';
 import ZoomInUp from '../components/animation/BackInDown';
 import ZoomOutDown from '../components/animation/BackOutDown';
 
+import { Trefoil } from 'ldrs/react'
+import 'ldrs/react/Trefoil.css'
+
+
 const BASE_URL = import.meta.env.BASE_URL;
 
 type Metric = {
@@ -61,20 +65,23 @@ const GitHub_Metrics: React.FC = () => {
 	const isActive = location.pathname === '/github_metrics';
 	const [modalUrl, setModalUrl] = useState<string | null>(null);
 	const [isClosing, setIsClosing] = useState(false);
+	const [imgLoaded, setImgLoaded] = useState(false);
 	
 	const handleOpenModal = (url: string) => {
-	    setModalUrl(url);
-	    setIsClosing(false);
-	    document.body.style.overflow = 'hidden';
+		setModalUrl(url);
+		setIsClosing(false);
+		setImgLoaded(false);
+		document.body.style.overflow = 'hidden';
 	};
 
 	const handleCloseModal = () => {
-	    setIsClosing(true);
-	    setTimeout(() => {
-	        setModalUrl(null);
-	        setIsClosing(false);
-	        document.body.style.overflow = '';
-	    }, 500); // Duración de ZoomOutDown
+		setIsClosing(true);
+		setTimeout(() => {
+			setModalUrl(null);
+			setIsClosing(false);
+			setImgLoaded(false);
+			document.body.style.overflow = '';
+		}, 500); // Duración de ZoomOutDown
 	};
 
 	return (
@@ -109,27 +116,63 @@ const GitHub_Metrics: React.FC = () => {
 				</ul>
 			</section>
 			{modalUrl && (
-			    <div className="metric-modal-overlay" onClick={handleCloseModal}>
-			        {isClosing ? (
-			            <ZoomOutDown>
-			                <div className="metric-modal" onClick={e => e.stopPropagation()}>
-			                    <button className="metric-modal-close" onClick={handleCloseModal} title="Cerrar">
-			                        <IoClose size={20} />
-			                    </button>
-			                    <img className="metric-modal-img" src={modalUrl} alt="Metric Modal" />
-			                </div>
-			            </ZoomOutDown>
-			        ) : (
-			            <ZoomInUp>
-			                <div className="metric-modal" onClick={e => e.stopPropagation()}>
-			                    <button className="metric-modal-close" onClick={handleCloseModal} title="Cerrar">
-			                        <IoClose size={20} />
-			                    </button>
-			                    <img className="metric-modal-img" src={modalUrl} alt="Metric Modal" />
-			                </div>
-			            </ZoomInUp>
-			        )}
-			    </div>
+				<div className="metric-modal-overlay" onClick={handleCloseModal}>
+					{isClosing ? (
+						<ZoomOutDown>
+							<div className="metric-modal" onClick={e => e.stopPropagation()}>
+								<button className="metric-modal-close" onClick={handleCloseModal} title="Cerrar">
+									<IoClose size={20} />
+								</button>
+								{!imgLoaded && (
+									<div className="metric-modal-loader">
+										<Trefoil
+											size="50"
+											stroke="5"
+											strokeLength="0.15"
+											bgOpacity="0.1"
+											speed="1.4"
+											color="var(--vegas-gold)"
+										/>
+									</div>
+								)}
+								<img
+									className={`metric-modal-img${imgLoaded ? ' show' : ''}`}
+									src={modalUrl}
+									alt="Metric Modal"
+									style={{ display: imgLoaded ? 'block' : 'none' }}
+									onLoad={() => setImgLoaded(true)}
+								/>
+							</div>
+						</ZoomOutDown>
+					) : (
+						<ZoomInUp>
+							<div className="metric-modal" onClick={e => e.stopPropagation()}>
+								<button className="metric-modal-close" onClick={handleCloseModal} title="Cerrar">
+									<IoClose size={20} />
+								</button>
+								{!imgLoaded && (
+									<div className="metric-modal-loader">
+										<Trefoil
+											size="50"
+											stroke="5"
+											strokeLength="0.15"
+											bgOpacity="0.1"
+											speed="1.4"
+											color="var(--vegas-gold)"
+										/>
+									</div>
+								)}
+								<img
+									className={`metric-modal-img${imgLoaded ? ' show' : ''}`}
+									src={modalUrl}
+									alt="Metric Modal"
+									style={{ display: imgLoaded ? 'block' : 'none' }}
+									onLoad={() => setImgLoaded(true)}
+								/>
+							</div>
+						</ZoomInUp>
+					)}
+				</div>
 			)}
 		</article>
 	);
