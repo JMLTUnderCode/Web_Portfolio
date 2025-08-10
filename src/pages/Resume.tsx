@@ -1,8 +1,8 @@
 import React from 'react';
 import { IoBookOutline, IoBriefcaseOutline, IoSparklesOutline } from 'react-icons/io5';
 import { useLocation } from 'react-router-dom';
-import FadeInUpOnScroll from '../components/FadeInUpOnScroll';
-import SlideInRightOnScroll from '../components/SlideInRightOnScroll';
+import FadeInUpOnScroll from '../components/animation/FadeInUpOnScroll';
+import SlideInRightOnScroll from '../components/animation/SlideInRightOnScroll';
 
 const BASE_URL = import.meta.env.BASE_URL;
 

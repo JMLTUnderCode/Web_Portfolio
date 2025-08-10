@@ -1,11 +1,11 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-interface SlideInRightOnScrollProps {
+interface BackOutDownProps {
 	children: React.ReactNode;
 	className?: string;
 }
 
-const SlideInRightOnScroll: React.FC<SlideInRightOnScrollProps> = ({ children, className = '' }) => {
+const BackOutDown: React.FC<BackOutDownProps> = ({ children, className = '' }) => {
 	const ref = useRef<HTMLDivElement>(null);
 	const [hasAnimated, setHasAnimated] = useState(false);
 
@@ -30,11 +30,11 @@ const SlideInRightOnScroll: React.FC<SlideInRightOnScrollProps> = ({ children, c
 	return (
 		<div
 			ref={ref}
-			className={`${className} animated-on-scroll${hasAnimated ? ' animate__animated animate__slideInRight' : ''}`}
+			className={`${className} animated-on-scroll ${hasAnimated ? 'animate__animated animate__backOutDown' : ''}`}
 		>
 			{children}
 		</div>
 	);
 };
 
-export default SlideInRightOnScroll;
+export default BackOutDown;

@@ -1,12 +1,82 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import SlideInRightOnScroll from '../components/SlideInRightOnScroll';
+import { IoEyeOutline, IoClose } from 'react-icons/io5';
+import SlideInRightOnScroll from '../components/animation/SlideInRightOnScroll';
+import FadeInUpOnScroll from '../components/animation/FadeInUpOnScroll';
+import ZoomInUp from '../components/animation/BackInDown';
+import ZoomOutDown from '../components/animation/BackOutDown';
 
-//const BASE_URL = import.meta.env.BASE_URL;
+const BASE_URL = import.meta.env.BASE_URL;
+
+type Metric = {
+	title: string,
+	img: string,
+	url: string,
+	description: string,
+};
+
+const metrics: Metric[] = [
+	// ...existing metrics...
+	{
+		title: "Most Used Languages",
+		img: `${BASE_URL}assets/images/StockCake-Ancient Knowledge Mandala_1754771933.jpg`, 
+		url: "https://github-readme-stats.vercel.app/api/top-langs/?username=JMLTUnderCode&langs_count=20&include_all_commits=true&count_private=true&layout=compact&hide_border=true&theme=neon",
+		description: "A list of the most used programming languages in the user's GitHub repositories."
+
+	},
+	{
+		title: "Trophies",
+		img: `${BASE_URL}assets/images/StockCake-Victory Trophy Pixel_1754771348.jpg`, 
+		url: "https://github-profile-trophy.vercel.app/?username=JMLTUnderCode&theme=radical&no-frame=false&margin-w=4&column=4&theme=dark_lover&margin-w=15&margin-h=15",
+		description: "A collection of trophies earned by the user for various achievements on GitHub."
+	},
+	{
+		title: "Stats",
+		img: `${BASE_URL}assets/images/StockCake-Mystical Pixel Pentagram_1754771665.jpg`,
+		url: "https://github-readme-stats.vercel.app/api?username=JMLTUnderCode&include_all_commits=true&count_private=true&show_icons=true&line_height=20&theme=neon&hide_border=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage" ,
+		description: "A summary of the user's GitHub statistics, including contributions, pull requests, and more."
+	},
+	{
+		title: "Streak",
+		img: `${BASE_URL}assets/images/StockCake-Ancient Artifact Illuminated_1754772158.jpg`,
+		url: "https://github-readme-streak-stats.herokuapp.com?user=JMLTUnderCode&theme=neon&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&mode=weekly",
+		description: "A representation of the user's GitHub contribution streak over time."
+	},
+	{
+		title: "Contributions",
+		img: `${BASE_URL}assets/images/StockCake-Golden Star Medallion_1754771403.jpg`,
+		url: "https://github-contributor-stats.vercel.app/api?username=JMLTUnderCode&limit=20&theme=neon&combine_all_yearly_contributions=true&hide_border=true&order_by=contributions",
+		description: "A list of the contributions made by the user across all repositories."
+	},
+	{
+		title: "Contributions Graph",
+		img: `${BASE_URL}assets/images/StockCake-Radiant Bronze Medallion_1754772161.jpg`,
+		url: "https://github-readme-activity-graph.vercel.app/graph?username=JMLTUnderCode&theme=chartreuse-dark&hide_border=true&days=15",
+		description: "A visual representation of the user's GitHub activity over the past 15 days."
+	},
+];
 
 const GitHub_Metrics: React.FC = () => {
 	const location = useLocation();
 	const isActive = location.pathname === '/github_metrics';
+	const [modalUrl, setModalUrl] = useState<string | null>(null);
+	const [isClosing, setIsClosing] = useState(false);
+	
+	const handleOpenModal = (url: string) => {
+	    setModalUrl(url);
+	    setIsClosing(false);
+	    document.body.style.overflow = 'hidden';
+	};
+
+	const handleCloseModal = () => {
+	    setIsClosing(true);
+	    setTimeout(() => {
+	        setModalUrl(null);
+	        setIsClosing(false);
+	        document.body.style.overflow = '';
+	    }, 500); // Duración de ZoomOutDown
+	};
+
 	return (
 		<article className={`pages github_metrics${isActive ? ' active' : ''}`} data-page="github_metrics">
 			<header>
@@ -14,27 +84,53 @@ const GitHub_Metrics: React.FC = () => {
 					<h2 className="h2 article-title">Github Metrics</h2>
 				</SlideInRightOnScroll>
 			</header>
-
-			<div className="metrics">
-				<div className="most_used_languages">
-					<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JMLTUnderCode&langs_count=20&include_all_commits=true&count_private=true&layout=compact&hide_border=true&theme=neon" />
-				</div>
-				<div className="contributions"> 
-					<img src="https://github-contributor-stats.vercel.app/api?username=JMLTUnderCode&limit=20&theme=neon&combine_all_yearly_contributions=true&hide_border=true"/>
-				</div>
-				<div className="trophies"> 
-					<img src="https://github-profile-trophy.vercel.app/?username=JMLTUnderCode&theme=radical&no-frame=false&no-bg=true&margin-w=4" />
-				</div>
-				<div className="stats">
-					<img src="https://github-readme-stats.vercel.app/api?username=JMLTUnderCode&include_all_commits=true&count_private=true&show_icons=true&line_height=20&theme=neon&hide_border=true" alt="my Github Stats"/>
-				</div>
-				<div className="streak">
-					<img src="https://github-readme-streak-stats.herokuapp.com?user=JMLTUnderCode&theme=neon&hide_border=true"/>
-				</div>
-				<div className="contributions_graph"> 
-					<img src="https://github-readme-activity-graph.vercel.app/graph?username=JMLTUnderCode&bg_color=0d1117&color=ffffff&line=00b3ff&point=f9fafa&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph" />
-				</div>
-			</div>
+			<section className="projects">
+				<ul className="project-list">
+					{metrics.map((metric) => (
+						<FadeInUpOnScroll key={metric.title}>
+							<li className="project-item active">
+								<a
+									type="button"
+									className="metric-open-btn"
+									onClick={() => handleOpenModal(metric.url)}
+									title={`Ver ${metric.title}`}
+								>
+									<h3 className="metric-title">{metric.title}</h3>
+									<figure className="project-img">
+										<div className="project-item-icon-box">
+											<IoEyeOutline />
+										</div>
+										<img src={metric.img} loading="lazy" alt={metric.title} />
+									</figure>
+								</a>
+							</li>
+						</FadeInUpOnScroll>
+					))}
+				</ul>
+			</section>
+			{modalUrl && (
+			    <div className="metric-modal-overlay" onClick={handleCloseModal}>
+			        {isClosing ? (
+			            <ZoomOutDown>
+			                <div className="metric-modal" onClick={e => e.stopPropagation()}>
+			                    <button className="metric-modal-close" onClick={handleCloseModal} title="Cerrar">
+			                        <IoClose size={20} />
+			                    </button>
+			                    <img className="metric-modal-img" src={modalUrl} alt="Metric Modal" />
+			                </div>
+			            </ZoomOutDown>
+			        ) : (
+			            <ZoomInUp>
+			                <div className="metric-modal" onClick={e => e.stopPropagation()}>
+			                    <button className="metric-modal-close" onClick={handleCloseModal} title="Cerrar">
+			                        <IoClose size={20} />
+			                    </button>
+			                    <img className="metric-modal-img" src={modalUrl} alt="Metric Modal" />
+			                </div>
+			            </ZoomInUp>
+			        )}
+			    </div>
+			)}
 		</article>
 	);
 };

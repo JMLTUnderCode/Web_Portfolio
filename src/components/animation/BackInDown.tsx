@@ -1,11 +1,11 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-interface FadeInUpOnScrollProps {
+interface BackInDownProps {
 	children: React.ReactNode;
 	className?: string;
 }
 
-const FadeInUpOnScroll: React.FC<FadeInUpOnScrollProps> = ({ children, className = '' }) => {
+const BackInDown: React.FC<BackInDownProps> = ({ children, className = '' }) => {
 	const ref = useRef<HTMLDivElement>(null);
 	const [hasAnimated, setHasAnimated] = useState(false);
 
@@ -30,11 +30,11 @@ const FadeInUpOnScroll: React.FC<FadeInUpOnScrollProps> = ({ children, className
 	return (
 		<div
 			ref={ref}
-			className={`${className} animated-on-scroll${hasAnimated ? ' animate__animated animate__fadeInUp' : ''}`}
+			className={`${className} animated-on-scroll ${hasAnimated ? 'animate__animated animate__backInDown' : ''}`}
 		>
 			{children}
 		</div>
 	);
 };
 
-export default FadeInUpOnScroll;
+export default BackInDown;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { IoChevronDown, IoEyeOutline } from 'react-icons/io5';
 import { useLocation } from 'react-router-dom';
-import SlideInRightOnScroll from '../components/SlideInRightOnScroll';
+import SlideInRightOnScroll from '../components/animation/SlideInRightOnScroll';
 
 const BASE_URL = import.meta.env.BASE_URL;
 

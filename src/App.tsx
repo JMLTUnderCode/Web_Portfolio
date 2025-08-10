@@ -5,7 +5,7 @@ import About from './pages/About';
 import Resume from './pages/Resume';
 import GitHub_Metrics from './pages/GitHub_Metrics';
 import Projects from './pages/Projects';
-import ScrollToTop from './components/ScrollToTop';
+import ScrollToTop from './components/animation/ScrollToTop';
 
 function App() {
   	return (

@@ -10,8 +10,8 @@ import {
 	IoLogoInstagram,
 	IoLogoGithub
 } from 'react-icons/io5';
-import CodeforcesIcon from './CordeforcesIcon';
-import Avatar3D from './Avatar3D';
+import CodeforcesIcon from '../assets/CordeforcesIcon';
+import Avatar3D from './animation/Avatar3D';
 
 const SOCIALS = [
 	{

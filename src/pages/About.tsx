@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import FadeInUpOnScroll from '../components/FadeInUpOnScroll';
-import SlideInRightOnScroll from '../components/SlideInRightOnScroll';
+import FadeInUpOnScroll from '../components/animation/FadeInUpOnScroll';
+import SlideInRightOnScroll from '../components/animation/SlideInRightOnScroll';
 
 const BASE_URL = import.meta.env.BASE_URL;
 
