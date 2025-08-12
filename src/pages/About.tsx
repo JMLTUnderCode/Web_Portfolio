@@ -26,12 +26,12 @@ const services: Service[] = [
 		title: 'FullStack Development',
 		text: 'Construyo proyectos completos, desde el frontend interactivo hasta el backend funcional, integrando bases de datos y APIs para crear experiencias web dinámicas y escalables.',
 	},
-	{
+	/*{
 		icon: 'icon-mobile.svg',
 		alt: 'Mobile app icon',
 		title: 'Mobile Development',
 		text: 'Diseño y desarrollo aplicaciones móviles intuitivas y funcionales, enfocadas en la experiencia del usuario y la optimización para diferentes dispositivos.',
-	},
+	},*/
 	{
 		icon: 'icon-database.svg',
 		alt: 'Database icon',
