@@ -6,9 +6,9 @@ import FadeInUpOnScroll from '../components/animation/FadeInUpOnScroll';
 import ZoomInUp from '../components/animation/BackInDown';
 import ZoomOutDown from '../components/animation/BackOutDown';
 
+// Uso de la animación de carga proviniente de LDRS.
 import { Trefoil } from 'ldrs/react'
 import 'ldrs/react/Trefoil.css'
-
 
 const BASE_URL = import.meta.env.BASE_URL;
 
@@ -20,7 +20,6 @@ type Metric = {
 };
 
 const metrics: Metric[] = [
-	// ...existing metrics...
 	{
 		title: "Most Used Languages",
 		img: `${BASE_URL}assets/images/metrics/metric-most-used-language.png`, 

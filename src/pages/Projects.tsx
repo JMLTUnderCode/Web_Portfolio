@@ -46,7 +46,7 @@ const Portfolio: React.FC = () => {
 			</header>
 
 			<section className="projects">
-				{/* Filtros para desktop */}
+				
 				<ul className="filter-list">
 					{categories.map((cat) => (
 						<li className="filter-item" key={cat}>
@@ -61,7 +61,6 @@ const Portfolio: React.FC = () => {
 					))}
 				</ul>
 
-				{/* Filtro select para mobile */}
 				<div className="filter-select-box">
 			  		<button
 						className="filter-select"
@@ -94,7 +93,6 @@ const Portfolio: React.FC = () => {
 		  			)}
 				</div>
 
-				{/* Lista de proyectos */}
 				<ul className="project-list">
 		  			{filteredProjects.map((project) => (
 						<li
