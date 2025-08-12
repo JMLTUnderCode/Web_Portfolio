@@ -15,71 +15,15 @@ type Project = {
 
 const projects: Project[] = [
 	{ 
-		title: 'Finance', 
+		title: 'Portfolio Web', 
 		category: 'web development', 
-		img: `${BASE_URL}assets/images/project-1.jpg`, 
-		alt: 'finance', 
-		url: '#'
-	},
-	{ 
-		title: 'Orizon', 
-		category: 'web development', 
-		img: `${BASE_URL}assets/images/project-2.png`, 
-		alt: 'orizon', 
-		url: '#' 
-	},
-	{ 
-		title: 'Fundo', 
-		category: 'web design', 
-		img: `${BASE_URL}assets/images/project-3.jpg`, 
-		alt: 'fundo', 
-		url: '#'
-	},
-	{ 
-		title: 'Brawlhalla', 
-		category: 'applications', 
-		img: `${BASE_URL}assets/images/project-4.png`, 
-		alt: 'brawlhalla', 
-		url: '#'
-	},
-	{ 
-		title: 'DSM.', 
-		category: 'web design', 
-		img: `${BASE_URL}assets/images/project-5.png`, 
-		alt: 'dsm.', 
-		url: '#'
-	},
-	{ 
-		title: 'MetaSpark', 
-		category: 'web design', 
-		img: `${BASE_URL}assets/images/project-6.png`,  
-		alt: 'metaspark', 
-		url: '#' 
-	},
-	{ 
-		title: 'Summary', 
-		category: 'web development', 
-		img: `${BASE_URL}assets/images/project-7.png`, 
-		alt: 'summary', 
-		url: '#' 
-	},
-	{ 
-		title: 'Task Manager', 
-		category: 'applications', 
-		img: `${BASE_URL}assets/images/project-8.jpg`, 
-		alt: 'task manager', 
-		url: '#' 
-	},
-	{ 
-		title: 'Arrival', 
-		category: 'web development', 
-		img: `${BASE_URL}assets/images/project-9.png`, 
-		alt: 'arrival', 
-		url: '#' 
+		img: `${BASE_URL}assets/images/projects/project-web-portfolio.jpg`, 
+		alt: 'portfolio web', 
+		url: 'https://jmltundercode.github.io/Web_Portfolio/#/about'
 	},
 ];
 
-const categories = ['all', 'web design', 'applications', 'web development'];
+const categories = ['all', 'web development'];
 
 const Portfolio: React.FC = () => {
 	const location = useLocation();
