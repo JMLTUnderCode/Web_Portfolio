@@ -65,7 +65,8 @@ const GitHub_Metrics: React.FC = () => {
 	const [modalUrl, setModalUrl] = useState<string | null>(null);
 	const [isClosing, setIsClosing] = useState(false);
 	const [imgLoaded, setImgLoaded] = useState(false);
-	
+	const [loadedImages, setLoadedImages] = useState<{ [title: string]: boolean }>({});
+
 	const handleOpenModal = (url: string) => {
 		setModalUrl(url);
 		setIsClosing(false);
@@ -103,10 +104,28 @@ const GitHub_Metrics: React.FC = () => {
 								>
 									<h3 className="metric-title">{metric.title}</h3>
 									<figure className="project-img">
-										<div className="project-item-icon-box">
-											<IoEyeOutline />
-										</div>
-										<img src={metric.img} loading="lazy" alt={metric.title} />
+									    <div className="project-item-icon-box">
+									        <IoEyeOutline />
+									    </div>
+									    {!loadedImages[metric.title] && (
+									        <div className="metric-img-loader">
+									            <Trefoil
+									                size="50"
+									                stroke="5"
+									                strokeLength="0.15"
+									                bgOpacity="0.1"
+									                speed="1.4"
+									                color="var(--vegas-gold)"
+									            />
+									        </div>
+									    )}
+									    <img
+									        src={metric.img}
+									        loading="lazy"
+									        alt={metric.title}
+											className={`metric-img${loadedImages[metric.title] ? ' show' : ''}`}
+									        onLoad={() => setLoadedImages(prev => ({ ...prev, [metric.title]: true }))}
+									    />
 									</figure>
 								</a>
 							</li>
