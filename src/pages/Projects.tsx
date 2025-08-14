@@ -17,7 +17,7 @@ const projects: Project[] = [
 	{ 
 		title: 'Portfolio Web', 
 		category: 'web development', 
-		img: `${BASE_URL}assets/images/projects/project-web-portfolio.jpg`, 
+		img: `${BASE_URL}assets/images/projects/project-web-portfolio.png`, 
 		alt: 'portfolio web', 
 		url: 'https://jmltundercode.github.io/Web_Portfolio/#/about'
 	},
