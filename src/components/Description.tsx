@@ -19,7 +19,7 @@ export function Description() {
       
       <section className="about-text">
         {aboutParagraphs.map((text, idx) => (
-          <FadeInUpOnScroll>
+          <FadeInUpOnScroll key={idx}>
             <p key={idx}>{text}</p>
           </FadeInUpOnScroll>
         ))}
