@@ -30,3 +30,11 @@ export interface Metric {
   url: string,
   description: string,
 };
+
+export interface Project {
+  title: string;
+  category: string;
+  img: string;
+  alt: string;
+  url: string;
+};
