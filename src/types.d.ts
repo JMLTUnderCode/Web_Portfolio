@@ -23,3 +23,10 @@ export interface SkillGroup {
   category: string;
   skills: Skill[];
 }
+
+export interface Metric {
+  title: string,
+  img: string,
+  url: string,
+  description: string,
+};
