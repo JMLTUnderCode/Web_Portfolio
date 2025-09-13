@@ -1,0 +1,25 @@
+export interface Education {
+  name: string;
+  start: string;
+  end: string;
+  description: string;
+};
+
+export interface Experience {
+  name: string;
+  start: string;
+  end: string;
+  description: string;
+};
+
+export interface Skill {
+  name: string;
+  logo: string;
+  level: string;
+  tagClass: string;
+};
+
+export interface SkillGroup {
+  category: string;
+  skills: Skill[];
+}
