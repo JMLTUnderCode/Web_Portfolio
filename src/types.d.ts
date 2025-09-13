@@ -38,3 +38,10 @@ export interface Project {
   alt: string;
   url: string;
 };
+
+export interface Service {
+  icon: string;
+  alt: string;
+  title: string;
+  text: string;
+};
