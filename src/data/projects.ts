@@ -9,4 +9,11 @@ export const PROJECTS: Project[] = [
     alt: 'portfolio web', 
     url: 'https://jmltundercode.github.io/Web_Portfolio/#/about'
   },
+  {
+    title: 'React',
+    category: CATEGORIES.YOUTUBE_COURSE,
+    img: `${BASE_URL}assets/images/projects/project-reactCourse-midudev.png`,
+    alt: 'react course',
+    url: 'https://github.com/JMLTUnderCode/React_Course',
+  },
 ];
