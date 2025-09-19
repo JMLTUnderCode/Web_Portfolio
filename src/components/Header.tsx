@@ -2,8 +2,8 @@ import React from 'react';
 import { IoChevronDown } from 'react-icons/io5';
 import Avatar3D from './animation/Avatar3D';
 
-import { SOCIALS } from '../data/socials';
-import { CONTACTS } from '../data/contacts';
+import { SocialMenu } from './SocialMenu';
+import { ContactMenu } from './ContactMenu';
 
 const Header: React.FC = () => {
   const sidebarRef = React.useRef<HTMLElement>(null);
@@ -31,32 +31,8 @@ const Header: React.FC = () => {
       </div>
       <div className="sidebar-info_more">
         <div className="separator"></div>
-        <ul className="social-list">
-          {SOCIALS.map((social) => (
-            <li className="social-item" key={social.title}>
-              <a
-                href={social.href}
-                className="social-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                title={social.title}
-              >
-                {social.icon}
-              </a>
-            </li>
-          ))}
-        </ul>
-        <ul className="contacts-list">
-          {CONTACTS.map((contact) => (
-            <li className="contact-item" key={contact.title}>
-              <div className="icon-box">{contact.icon}</div>
-              <div className="contact-info">
-                <p className="contact-title">{contact.title}</p>
-                {contact.value}
-              </div>
-            </li>
-          ))}
-        </ul>
+        <SocialMenu />
+        <ContactMenu />
       </div>
     </aside>
   );
